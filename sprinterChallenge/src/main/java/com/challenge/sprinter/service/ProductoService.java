@@ -3,7 +3,7 @@ package com.challenge.sprinter.service;
 
 import com.challenge.sprinter.domain.Producto;
 import com.challenge.sprinter.exception.ResourceNotFoundException;
-import com.challenge.sprinter.ProductoRepository;
+import com.challenge.sprinter.repository.ProductoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

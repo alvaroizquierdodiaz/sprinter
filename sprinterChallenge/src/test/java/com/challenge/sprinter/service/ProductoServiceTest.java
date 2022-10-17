@@ -1,6 +1,6 @@
 package com.challenge.sprinter.service;
 
-import com.challenge.sprinter.ProductoRepository;
+import com.challenge.sprinter.repository.ProductoRepository;
 import com.challenge.sprinter.domain.Producto;
 import com.challenge.sprinter.util.enums.Moneda;
 import org.junit.Assert;
