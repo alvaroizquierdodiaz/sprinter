@@ -3,7 +3,7 @@ package com.challenge.sprinter.service;
 
 import com.challenge.sprinter.domain.Producto;
 import com.challenge.sprinter.exception.ResourceNotFoundException;
-import com.challenge.sprinter.repository.ProductoRepository;
+import com.challenge.sprinter.ProductoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +57,8 @@ public class ProductoService {
   public Object borrarProducto(Integer id) {
     try {
       logger.info("Entrando al método borrarProducto de la clase " +logger.getName());
-      if (!productoRepository.findById(id).isPresent()){
+      var productoEncontrado = productoRepository.findById(id);
+      if (!productoEncontrado.isPresent()){
         logger.error("Producto con id " +id+ " no se encuentra en la base de datos: " +  HttpStatus.NOT_FOUND);
         return new ResponseEntity<String>(new String("Producto no se encuentra en la base de datos"), HttpStatus.NOT_FOUND);
       } else {

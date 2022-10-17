@@ -2,12 +2,10 @@ package com.challenge.sprinter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EnableWebMvc
-@EnableSwagger2
+@ComponentScan(basePackages = "com.challenge.sprinter.")
 public class SprinterApplication {
 
 	public static void main(String[] args) {
